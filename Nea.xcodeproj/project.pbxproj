@@ -524,6 +524,7 @@
 		71BE325F2A06109D00B76A69 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		71BE32602A06109D00B76A69 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		71BEA9C628E3D95B00B58933 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		71C2AB982D906CE6006678D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		71CD9A762D8F15A000C3DC09 /* Granite */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Granite; path = ../Granite; sourceTree = SOURCE_ROOT; };
 		71CD9AAD2D8F30C200C3DC09 /* SandKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SandKit; path = ../SandKit; sourceTree = SOURCE_ROOT; };
 		71CD9AE02D8F328500C3DC09 /* LLMModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMModels.swift; sourceTree = "<group>"; };
@@ -686,6 +687,7 @@
 		711B3F6C2885D43700F3080D = {
 			isa = PBXGroup;
 			children = (
+				71C2AB982D906CE6006678D4 /* README.md */,
 				71CD9A762D8F15A000C3DC09 /* Granite */,
 				71CD9AAD2D8F30C200C3DC09 /* SandKit */,
 				7110C8BB2A026DEF00824D58 /* Nea--macOS--Info.plist */,

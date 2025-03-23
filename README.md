@@ -15,7 +15,7 @@ General Query View           |  Prompt Studio
 **Table of Contents**
 - [Requirements](#requirements)
 - [Swift Packages & Credits](#swift-packages-&-credits)
-- [Setting Up Azure OpenAI](#setting-up-azure-openai)
+- [Setting Up Local Models](#setting-up-local-models)
 - [Persisting Chat Messages](#persisting-chat-messages)
 - [Guide WIP](#guide)
 - [FAQ](#FAQ)
@@ -41,27 +41,30 @@ General Query View           |  Prompt Studio
 Removed
 - [MarqueKit] is a private repo that handles encryption this has been removed and comments show where encryption can take place to safely store data like API Keys. 
 
-## Setting Up Azure OpenAI
-1. Enable Azure in Settings
+## Setting Up Local Models
 
-![Enable in settings](README_Assets/5.png)
+The file [LLMModels.swift](https://github.com/riteshpakala/Nea/blob/main/Services/Sand/Models/LLMModels.swift), has some insight on how model configurations are prepared.
 
-2. [In SandGPT, setup the config to match your Azure OpenAI Resource/Deployment/ApiKey](https://github.com/pexavc/Nea/tree/main/Services/Sand/Client/SandGPT.swift#L36-L40)
+This file [LLMEvaluator.swift](https://github.com/riteshpakala/Nea/blob/main/Services/Sand/Client/LLMEvaluator.swift), shows how the configuration is called and used to load the model and eventually generate responses.
 
-```swift
-static var AZURE_CONFIG: ChatGPTAzure.Config {
-    .init(apiKey: "...",
-          apiVersion: "2023-05-15", //apiVersion not necessary for initialization
-          resourceName: "...",
-          deploymentName: "...")
-}
-```
+## Downloading Models from HuggingFace
+
+1. Setup a huggingface account at setup the [huggingface cli](https://huggingface.co/docs/huggingface_hub/main/en/guides/cli)
+
+2. Using [homebrew](https://brew.sh) is the easiest option to set this up. Make sure homebrew is allowed to be used as a package manager within your team before downloading.
+
+3. Running `huggingface-cli login` in Terminal should prompt a handshake to authenticate.
+
+4. To setup ssh, you can go into account settings and then the [SSH & GPG tab](https://huggingface.co/settings/keys). [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) has a good guide on setting up ssh keys and agents. The similar approach can be applied here.
+
+5. Install [git lfs](https://git-lfs.com), some of these models are quite large. When inside the folder you would like to clone repositories within, run `git lfs install` in terminal.
+
+6. Once done, download a model like [mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit](https://huggingface.co/mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit) via `git clone https://huggingface.co/mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit`. This is a great starter model to experiment with, about 1Gb~.
+
+7. Update the [LLMModels.swift](https://github.com/riteshpakala/Nea/blob/main/Services/Sand/Models/LLMModels.swift) file to reflect your path and finally, ask a question.
 
 ## Persisting Chat Messages
 > Repo will be updated to include this out of the box, front-end side, in the future.
-
-Back in SandGPT: 
-https://github.com/pexavc/Nea/blob/24fbcfbac23eb7f13b84cdee6307211596ee54d0/Services/Sand/Models/SandGPT.swift#L48
 
 Simply build a flow to store the type `ChatMessage` prior to using the Swift Package.
 
@@ -163,9 +166,7 @@ PopupableView(.promptStudio,
 
 ## FAQ
 
-### Why chat completions over completions for prompts?
-- No specific reason besides, finding it to provide better results for my own needs.
-- Completions endpoint capability will be added soon along with a toggle to switch between.
+`wip`
 
 ## More Previews
 

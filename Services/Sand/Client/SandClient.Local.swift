@@ -71,12 +71,18 @@ extension SandClient {
                 
                 let generateParameters = GenerateParameters(temperature: config.temperature?.asFloat ?? 0.5, topP: config.topP?.asFloat ?? 1.0)
                 
+                let sanitizedPrompt: String
+                
+                if let systemPrompt {
+                    sanitizedPrompt = "<system>\(systemPrompt)</system>\n\(prompt)"
+                } else {
+                    sanitizedPrompt = prompt
+                }
+                
                 let result = try await modelContainer.perform { context in
-                    let input = try await context.processor.prepare(input: .init(prompt: prompt))
+                    let input = try await context.processor.prepare(input: .init(prompt: sanitizedPrompt))
                     
                     var replyDebouncerInit: CGFloat = CFAbsoluteTimeGetCurrent()
-                    
-                    
                     
                     return try MLXLMCommon.generate(
                         input: input, parameters: generateParameters, context: context
