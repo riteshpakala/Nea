@@ -67,7 +67,7 @@ struct FileTextEditorView: View {
     }
     
     var documentTokenCount: Int {
-        //SandGPT.shared.gpt3Tokenizer.encoder.enconde(text: promptBody).count
+        //SandClient.shared.gpt3Tokenizer.encoder.enconde(text: promptBody).count
         tokenizer.encoder.enconde(text: documentContents).count
     }
     

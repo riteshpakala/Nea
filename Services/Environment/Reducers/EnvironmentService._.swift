@@ -48,19 +48,6 @@ extension EnvironmentService {
             
             //Config
             config.center.$state.binding.isAccountTabActive.wrappedValue = true
-            
-            //SandGPT
-            print("[Environment] [SandGPT] is customAPI set \(config.state.isCustomAPIKeySet)")
-            SandGPT.shared.setup()
-            
-            if config.state.isCustomAPIKeySet {
-                SandGPT.shared.CUSTOM_API_KEY = config.state.customAPIKey
-                SandGPT.shared.useCustomAPI()
-            }
-            
-            if config.state.engineClass == .azure {
-                SandGPT.shared.unlock()
-            }
         }
     }
 }

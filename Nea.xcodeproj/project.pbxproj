@@ -109,16 +109,16 @@
 		717E613428A0D69B009A2B1A /* Home._.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717E613228A0D69B009A2B1A /* Home._.swift */; };
 		718148B72A0F65000054E71A /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148B62A0F65000054E71A /* AccountManager.swift */; };
 		718148B82A0F65000054E71A /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148B62A0F65000054E71A /* AccountManager.swift */; };
-		718148BA2A0F818F0054E71A /* SandGPT.Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148B92A0F818F0054E71A /* SandGPT.Tokenizer.swift */; };
-		718148BB2A0F818F0054E71A /* SandGPT.Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148B92A0F818F0054E71A /* SandGPT.Tokenizer.swift */; };
+		718148BA2A0F818F0054E71A /* SandClient.Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148B92A0F818F0054E71A /* SandClient.Tokenizer.swift */; };
+		718148BB2A0F818F0054E71A /* SandClient.Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148B92A0F818F0054E71A /* SandClient.Tokenizer.swift */; };
 		718148BD2A0F89050054E71A /* PaneKit.Window.Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148BC2A0F89050054E71A /* PaneKit.Window.Visibility.swift */; };
 		718148BE2A0F89050054E71A /* PaneKit.Window.Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148BC2A0F89050054E71A /* PaneKit.Window.Visibility.swift */; };
 		718148C02A0F90E80054E71A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148BF2A0F90E80054E71A /* SessionManager.swift */; };
 		718148C12A0F90E80054E71A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148BF2A0F90E80054E71A /* SessionManager.swift */; };
 		718148C32A0F960C0054E71A /* Mount.Views.Locked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148C22A0F960C0054E71A /* Mount.Views.Locked.swift */; };
 		718148C42A0F960C0054E71A /* Mount.Views.Locked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718148C22A0F960C0054E71A /* Mount.Views.Locked.swift */; };
-		7192B18A2A0B146600C579A4 /* SandGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192B1892A0B146600C579A4 /* SandGPT.swift */; };
-		7192B18B2A0B146600C579A4 /* SandGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192B1892A0B146600C579A4 /* SandGPT.swift */; };
+		7192B18A2A0B146600C579A4 /* SandClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192B1892A0B146600C579A4 /* SandClient.swift */; };
+		7192B18B2A0B146600C579A4 /* SandClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192B1892A0B146600C579A4 /* SandClient.swift */; };
 		7192B1932A0B5C8900C579A4 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192B1902A0B5C8900C579A4 /* ConfigService.swift */; };
 		7192B1942A0B5C8900C579A4 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192B1902A0B5C8900C579A4 /* ConfigService.swift */; };
 		7192B1952A0B5C8900C579A4 /* ConfigService+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192B1912A0B5C8900C579A4 /* ConfigService+Center.swift */; };
@@ -206,10 +206,8 @@
 		71CD9AEA2D8F33B800C3DC09 /* LLMEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AE82D8F33B500C3DC09 /* LLMEvaluator.swift */; };
 		71CD9AEC2D8F347100C3DC09 /* DeviceStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */; };
 		71CD9AED2D8F347100C3DC09 /* DeviceStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */; };
-		71CD9AEF2D8F380A00C3DC09 /* SandGPT.Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEE2D8F380700C3DC09 /* SandGPT.Local.swift */; };
-		71CD9AF02D8F380A00C3DC09 /* SandGPT.Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEE2D8F380700C3DC09 /* SandGPT.Local.swift */; };
-		71CD9AF22D8F381F00C3DC09 /* SandGPT.Online.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AF12D8F381C00C3DC09 /* SandGPT.Online.swift */; };
-		71CD9AF32D8F381F00C3DC09 /* SandGPT.Online.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AF12D8F381C00C3DC09 /* SandGPT.Online.swift */; };
+		71CD9AEF2D8F380A00C3DC09 /* SandClient.Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */; };
+		71CD9AF02D8F380A00C3DC09 /* SandClient.Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */; };
 		71CEBDDB2A07175700DE6CDE /* EnvironmentService+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CEBDD82A07175700DE6CDE /* EnvironmentService+Center.swift */; };
 		71CEBDDC2A07175700DE6CDE /* EnvironmentService+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CEBDD82A07175700DE6CDE /* EnvironmentService+Center.swift */; };
 		71CEBDDD2A07175700DE6CDE /* EnvironmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CEBDD92A07175700DE6CDE /* EnvironmentService.swift */; };
@@ -480,11 +478,11 @@
 		717D388A2887A44D00165D7D /* Home+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+View.swift"; sourceTree = "<group>"; };
 		717E613228A0D69B009A2B1A /* Home._.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home._.swift; sourceTree = "<group>"; };
 		718148B62A0F65000054E71A /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
-		718148B92A0F818F0054E71A /* SandGPT.Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandGPT.Tokenizer.swift; sourceTree = "<group>"; };
+		718148B92A0F818F0054E71A /* SandClient.Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandClient.Tokenizer.swift; sourceTree = "<group>"; };
 		718148BC2A0F89050054E71A /* PaneKit.Window.Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaneKit.Window.Visibility.swift; sourceTree = "<group>"; };
 		718148BF2A0F90E80054E71A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		718148C22A0F960C0054E71A /* Mount.Views.Locked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mount.Views.Locked.swift; sourceTree = "<group>"; };
-		7192B1892A0B146600C579A4 /* SandGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandGPT.swift; sourceTree = "<group>"; };
+		7192B1892A0B146600C579A4 /* SandClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandClient.swift; sourceTree = "<group>"; };
 		7192B1902A0B5C8900C579A4 /* ConfigService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
 		7192B1912A0B5C8900C579A4 /* ConfigService+Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConfigService+Center.swift"; sourceTree = "<group>"; };
 		7192B1972A0B5D0200C579A4 /* View+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Background.swift"; sourceTree = "<group>"; };
@@ -531,8 +529,7 @@
 		71CD9AE02D8F328500C3DC09 /* LLMModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMModels.swift; sourceTree = "<group>"; };
 		71CD9AE82D8F33B500C3DC09 /* LLMEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMEvaluator.swift; sourceTree = "<group>"; };
 		71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStat.swift; sourceTree = "<group>"; };
-		71CD9AEE2D8F380700C3DC09 /* SandGPT.Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandGPT.Local.swift; sourceTree = "<group>"; };
-		71CD9AF12D8F381C00C3DC09 /* SandGPT.Online.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandGPT.Online.swift; sourceTree = "<group>"; };
+		71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandClient.Local.swift; sourceTree = "<group>"; };
 		71CEBDD82A07175700DE6CDE /* EnvironmentService+Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentService+Center.swift"; sourceTree = "<group>"; };
 		71CEBDD92A07175700DE6CDE /* EnvironmentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentService.swift; sourceTree = "<group>"; };
 		71CEBDE42A0718F900DE6CDE /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
@@ -928,10 +925,9 @@
 			isa = PBXGroup;
 			children = (
 				71CD9AE82D8F33B500C3DC09 /* LLMEvaluator.swift */,
-				7192B1892A0B146600C579A4 /* SandGPT.swift */,
-				71CD9AEE2D8F380700C3DC09 /* SandGPT.Local.swift */,
-				71CD9AF12D8F381C00C3DC09 /* SandGPT.Online.swift */,
-				718148B92A0F818F0054E71A /* SandGPT.Tokenizer.swift */,
+				7192B1892A0B146600C579A4 /* SandClient.swift */,
+				71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */,
+				718148B92A0F818F0054E71A /* SandClient.Tokenizer.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -1016,11 +1012,11 @@
 		71BE32032A05AB3D00B76A69 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				71BE32072A05AB3D00B76A69 /* Reducers */,
 				71BE320E2A05AFDF00B76A69 /* Views */,
 				71BE32042A05AB3D00B76A69 /* Config.swift */,
 				71BE32052A05AB3D00B76A69 /* Config+Center.swift */,
 				71BE32062A05AB3D00B76A69 /* Config+View.swift */,
-				71BE32072A05AB3D00B76A69 /* Reducers */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -1686,7 +1682,6 @@
 				718148BD2A0F89050054E71A /* PaneKit.Window.Visibility.swift in Sources */,
 				71F0578C2A27205C00DBB956 /* Path+Convenience.swift in Sources */,
 				71F057742A27205C00DBB956 /* CGFloat+Angle.swift in Sources */,
-				71CD9AF22D8F381F00C3DC09 /* SandGPT.Online.swift in Sources */,
 				71DF107F28CC697600559DBC /* ProgressContent.swift in Sources */,
 				71EDCFEA2A095AF600857066 /* PaneKit.Window.Component.Kind.swift in Sources */,
 				71DF106F28CC697600559DBC /* DictionaryEncoder.swift in Sources */,
@@ -1746,7 +1741,7 @@
 				71A547532A1C757E0083A8DF /* TokenCountView.swift in Sources */,
 				71DF107728CC697600559DBC /* NumberFormatter.swift in Sources */,
 				7163517C2A172BF100C06533 /* QueryService.swift in Sources */,
-				71CD9AEF2D8F380A00C3DC09 /* SandGPT.Local.swift in Sources */,
+				71CD9AEF2D8F380A00C3DC09 /* SandClient.Local.swift in Sources */,
 				71CEBE102A0729E500DE6CDE /* PEXApp.Delegate.swift in Sources */,
 				71F0577C2A27205C00DBB956 /* CGFloat+Convenience.swift in Sources */,
 				71F057AA2A27205C00DBB956 /* Int+Angle.swift in Sources */,
@@ -1802,7 +1797,7 @@
 				71EA5BD52A103BED00B0F82D /* PaneKit.PopupView.swift in Sources */,
 				71EDCFF72A09781000857066 /* ShortcutBar+Center.swift in Sources */,
 				71F057A02A27205C00DBB956 /* Float+Convenience.swift in Sources */,
-				718148BA2A0F818F0054E71A /* SandGPT.Tokenizer.swift in Sources */,
+				718148BA2A0F818F0054E71A /* SandClient.Tokenizer.swift in Sources */,
 				71EA5BD22A10380D00B0F82D /* ColorPicker.swift in Sources */,
 				716214FF2A031E32009D19B6 /* NSTextView.swift in Sources */,
 				71BE32162A05B4FE00B76A69 /* AccountConfigView.swift in Sources */,
@@ -1847,7 +1842,7 @@
 				7145EF0D28D43F1D00BFD19A /* Date.swift in Sources */,
 				716351712A17179500C06533 /* PromptPreviewView.swift in Sources */,
 				71CEBE192A07339000DE6CDE /* EnvironmentService.Hotkey.swift in Sources */,
-				7192B18A2A0B146600C579A4 /* SandGPT.swift in Sources */,
+				7192B18A2A0B146600C579A4 /* SandClient.swift in Sources */,
 				71DF106D28CC697600559DBC /* DictionaryDecoder.swift in Sources */,
 				71BE32272A05B90500B76A69 /* AccountService.swift in Sources */,
 				71DF107328CC697600559DBC /* DictionaryErrors.swift in Sources */,
@@ -1882,7 +1877,6 @@
 				718148BE2A0F89050054E71A /* PaneKit.Window.Visibility.swift in Sources */,
 				71F0578D2A27205C00DBB956 /* Path+Convenience.swift in Sources */,
 				71F057752A27205C00DBB956 /* CGFloat+Angle.swift in Sources */,
-				71CD9AF32D8F381F00C3DC09 /* SandGPT.Online.swift in Sources */,
 				71EDCFEB2A095AF600857066 /* PaneKit.Window.Component.Kind.swift in Sources */,
 				71DF108028CC697600559DBC /* ProgressContent.swift in Sources */,
 				71DF107028CC697600559DBC /* DictionaryEncoder.swift in Sources */,
@@ -1942,7 +1936,7 @@
 				71A547542A1C757E0083A8DF /* TokenCountView.swift in Sources */,
 				71DF107828CC697600559DBC /* NumberFormatter.swift in Sources */,
 				7163517D2A172BF100C06533 /* QueryService.swift in Sources */,
-				71CD9AF02D8F380A00C3DC09 /* SandGPT.Local.swift in Sources */,
+				71CD9AF02D8F380A00C3DC09 /* SandClient.Local.swift in Sources */,
 				71CEBE112A0729E500DE6CDE /* PEXApp.Delegate.swift in Sources */,
 				71F0577D2A27205C00DBB956 /* CGFloat+Convenience.swift in Sources */,
 				71F057AB2A27205C00DBB956 /* Int+Angle.swift in Sources */,
@@ -1999,7 +1993,7 @@
 				71EA5BD62A103BED00B0F82D /* PaneKit.PopupView.swift in Sources */,
 				71F057A12A27205C00DBB956 /* Float+Convenience.swift in Sources */,
 				71EDCFF82A09781000857066 /* ShortcutBar+Center.swift in Sources */,
-				718148BB2A0F818F0054E71A /* SandGPT.Tokenizer.swift in Sources */,
+				718148BB2A0F818F0054E71A /* SandClient.Tokenizer.swift in Sources */,
 				71EA5BD32A10380D00B0F82D /* ColorPicker.swift in Sources */,
 				71BE32172A05B4FE00B76A69 /* AccountConfigView.swift in Sources */,
 				713FFDD62A0DFC9400E6F9AF /* PromptConfigView.swift in Sources */,
@@ -2042,7 +2036,7 @@
 				71A28E0B295233B200EAE8EE /* Fonts.swift in Sources */,
 				716351722A17179500C06533 /* PromptPreviewView.swift in Sources */,
 				71CEBE1A2A07339000DE6CDE /* EnvironmentService.Hotkey.swift in Sources */,
-				7192B18B2A0B146600C579A4 /* SandGPT.swift in Sources */,
+				7192B18B2A0B146600C579A4 /* SandClient.swift in Sources */,
 				7145EF0E28D43F1D00BFD19A /* Date.swift in Sources */,
 				71DF106E28CC697600559DBC /* DictionaryDecoder.swift in Sources */,
 				71BE32282A05B90500B76A69 /* AccountService.swift in Sources */,

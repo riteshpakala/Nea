@@ -24,7 +24,7 @@ extension SandService {
                         .CommandMenuActivated
                         .Meta(isActive: isActive))
             
-            SandGPTTokenizerManager.shared.pause = isActive
+            SandClientTokenizerManager.shared.pause = isActive
             
             if isActive && query.state.value.isEmpty {
                 query.center.$state.binding.value.wrappedValue = "/"
@@ -87,7 +87,7 @@ extension SandService {
             }
             
             //When command menu is shown tokenizer is paused so we unpause it
-            SandGPTTokenizerManager.shared.pause = false
+            SandClientTokenizerManager.shared.pause = false
             
             //Setup subcommands
             state.subCommandSet = [:]

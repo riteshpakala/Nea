@@ -43,16 +43,14 @@ extension ConfigService {
                   meta.key.newlinesSanitized.isEmpty == false else { return }
             
             state.customAPIKey = meta.key
-            SandGPT.shared.CUSTOM_API_KEY = state.customAPIKey
-            SandGPT.shared.useCustomAPI()
             
 //            [CAN REMOVE]
 //            API Key Encryption and storage
 //
 //            state.customAPIKey = data
 //
-//            SandGPT.shared.CUSTOM_API_KEY = state.customAPIKey
-//            SandGPT.shared.useCustomAPI()
+//            SandClient.shared.CUSTOM_API_KEY = state.customAPIKey
+//            SandClient.shared.useCustomAPI()
         }
     }
     
@@ -61,9 +59,6 @@ extension ConfigService {
         
         func reduce(state: inout Center.State) {
             state.customAPIKey = nil
-            
-            SandGPT.shared.CUSTOM_API_KEY = nil
-            SandGPT.shared.useMainAPI()
         }
     }
     

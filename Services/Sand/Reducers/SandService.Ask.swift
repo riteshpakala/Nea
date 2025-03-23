@@ -15,7 +15,7 @@ extension SandService {
         @Relay var query: QueryService
         
         func reduce(state: inout Center.State) {
-            guard SandGPT.shared.isResponding == false else { return }
+            guard SandClient.shared.isResponding == false else { return }
             
             let maxTokenCount: Int = prompts.maxTokenCount(state.commandSet)
             
@@ -33,8 +33,8 @@ extension SandService {
             //Prompt Generation
             if let command = state.commandSet,
                let prompt = engineeredPrompt {
-                if SandGPTTokenizerManager.shared.kit.tokenCount > maxTokenCount {
-                    state.lastError = .init(message: "Please reduce the amount of text in order reach the token count limit. You are currently at \(SandGPTTokenizerManager.shared.kit.tokenCount)/\(maxTokenCount)")
+                if SandClientTokenizerManager.shared.kit.tokenCount > maxTokenCount {
+                    state.lastError = .init(message: "Please reduce the amount of text in order reach the token count limit. You are currently at \(SandClientTokenizerManager.shared.kit.tokenCount)/\(maxTokenCount)")
                     
                     return
                 }
@@ -58,8 +58,8 @@ extension SandService {
                 print("[SandService] Using /\(command.capitalized) \(prompt.isSystemPrompt ? "" : "(custom)") ------------- ")
                 print(prompt.debugDescription)
             } else {
-                if SandGPTTokenizerManager.shared.kit.tokenCount > maxTokenCount {
-                    state.lastError = .init(message: "Please reduce the amount of text in order reach the token count limit. You are currently at \(SandGPTTokenizerManager.shared.kit.tokenCount)/\(maxTokenCount)")
+                if SandClientTokenizerManager.shared.kit.tokenCount > maxTokenCount {
+                    state.lastError = .init(message: "Please reduce the amount of text in order reach the token count limit. You are currently at \(SandClientTokenizerManager.shared.kit.tokenCount)/\(maxTokenCount)")
                     
                     return
                 }
@@ -83,18 +83,17 @@ extension SandService {
             state.isResponding = true
             state.responseHelpers = []
             
-            SandGPT.shared.reset()
+            SandClient.shared.reset()
             
             print("[SandService] Command for prompt: \(state.commandSet)")
             print("[SandService] Sub Command for prompt: \(state.subCommandSet?.values.compactMap { "\($0.id):\($0.value.id)" })")
             print("[SandService] Use custom config: \(config.state.customPromptConfigEnabled)")
             print("[SandService] Use System prompt: \(systemPrompt)")
-            SandGPT.shared.ask(userPrompt,
+            SandClient.shared.ask(userPrompt,
                                withSystemPrompt: systemPrompt,
                                withConfig: engineeredPrompt?.config ?? .init(),
                                stream: config.state.streamResponse,
-                               event: received,
-                               config.state.engineClass)
+                               event: received)
         }
     }
     
@@ -106,7 +105,7 @@ extension SandService {
         @Relay var query: QueryService
         @Relay var config: ConfigService
         
-        @Payload var response: SandGPT.Response?
+        @Payload var response: SandClient.Response?
         
         func reduce(state: inout Center.State) {
             guard response?.isComplete == false else {

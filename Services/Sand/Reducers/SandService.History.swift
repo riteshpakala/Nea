@@ -23,7 +23,7 @@ extension SandService {
             //TODO: multiple reducers in a single block are not persisting states
             //Race conditions, related to Issue #1 in Granite repo
             
-            SandGPT.shared.reset()
+            SandClient.shared.reset()
             
             if let command = meta.history.command {
                 //Restore command

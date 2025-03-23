@@ -1,5 +1,5 @@
 //
-//  SandGPT.Local.swift
+//  SandClient.Local.swift
 //  Nea
 //
 //  Created by Ritesh Pakala on 3/22/25.
@@ -17,7 +17,7 @@ import Foundation
 import SandKit
 import Combine
 
-extension SandGPT {
+extension SandClient {
     func load() async throws -> ModelContainer {
         switch loadState {
         case .idle:
@@ -41,12 +41,12 @@ extension SandGPT {
             "Loaded \(modelConfiguration.id).  Weights: \(numParams / (1024*1024))M"
             loadState = .loaded(modelContainer)
             
-            print("[SandGPT] Loaded model container.")
+            print("[SandClient] Loaded model container.")
             
             return modelContainer
             
         case .loaded(let modelContainer):
-            print("[SandGPT] Model container already loaded.")
+            print("[SandClient] Model container already loaded.")
             return modelContainer
         }
     }
@@ -56,24 +56,27 @@ extension SandGPT {
         withSystemPrompt systemPrompt: String? = nil,
         withConfig config: PromptConfig,
         stream: Bool = true,
-        event: E,
-        _ engineClass: APITYPE = .local
+        event: E
     ) {
-        print("[SandGPT] Asking Locally")
+        print("[SandClient] Asking Locally")
         self.currentTask?.task = Task {
             
             var output = ""
             
             do {
                 let modelContainer = try await load()
-                print("[SandGPT] Performing inference")
+                print("[SandClient] Performing inference")
                 // each time you generate you will get something new
                 MLXRandom.seed(UInt64(Date.timeIntervalSinceReferenceDate * 1000))
+                
+                let generateParameters = GenerateParameters(temperature: config.temperature?.asFloat ?? 0.5, topP: config.topP?.asFloat ?? 1.0)
                 
                 let result = try await modelContainer.perform { context in
                     let input = try await context.processor.prepare(input: .init(prompt: prompt))
                     
                     var replyDebouncerInit: CGFloat = CFAbsoluteTimeGetCurrent()
+                    
+                    
                     
                     return try MLXLMCommon.generate(
                         input: input, parameters: generateParameters, context: context
@@ -111,7 +114,7 @@ extension SandGPT {
                 // self.stat = " Tokens/second: \(String(format: "%.3f", result.tokensPerSecond))"
                 
             } catch {
-                print("[SandGPT] Error: \(error)")
+                print("[SandClient] Error: \(error)")
                 output = "Failed: \(error)"
             }
             

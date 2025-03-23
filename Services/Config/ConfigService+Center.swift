@@ -15,9 +15,7 @@ extension ConfigService {
                 }
             }
             
-            //GPT
             var streamResponse: Bool = true
-            var engineClass: APITYPE = .local
             
             //Hotkeys
             var mountHotkey: InteractionManager.HotkeyOptions = .n
@@ -73,10 +71,6 @@ extension ConfigService {
         @Event var updateHistory: UpdateHistory.Reducer
         
         @Store(persist: "nea.persistence.config.0003", autoSave: true, preload: true) public var state: State
-    }
-    
-    var isCustomAPIEnabled: Bool {
-        state.engineClass == .openai
     }
     
     static func decode(_ bytes: [UInt32]) -> String? {

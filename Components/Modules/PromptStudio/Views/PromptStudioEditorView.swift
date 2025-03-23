@@ -105,7 +105,7 @@ struct PromptStudioEditorView: View {
     }
     
     var promptTokenCount: Int {
-        //SandGPT.shared.gpt3Tokenizer.encoder.enconde(text: promptBody).count
+        //SandClient.shared.gpt3Tokenizer.encoder.enconde(text: promptBody).count
         tokenizer.encoder.enconde(text: promptBody).count
     }
     

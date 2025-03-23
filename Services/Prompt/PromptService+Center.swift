@@ -27,7 +27,7 @@ extension PromptService {
         1200
     }
     
-    //Entire max for engines (Should probably be in SandGPT.shared?)
+    //Entire max for engines (Should probably be in SandClient.shared?)
     static var maxTokenCount: Int {
         4096
     }

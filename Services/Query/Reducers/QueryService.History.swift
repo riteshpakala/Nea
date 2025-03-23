@@ -15,9 +15,9 @@ extension QueryService {
         
         func reduce(state: inout Center.State) {
             guard let meta = self.meta else { return }
-            SandGPTTokenizerManager.shared.pause = true
+            SandClientTokenizerManager.shared.pause = true
             state.value = meta.value
-            SandGPTTokenizerManager.shared.pause = false
+            SandClientTokenizerManager.shared.pause = false
         }
     }
 }
