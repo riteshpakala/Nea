@@ -1,12 +1,12 @@
 # Nea (macOS)
 
-A SwiftUI macOS application to run local LLM models. Started as a GPT/LLM Client with Prompt Engineering support with Microsoft's Azure OpenAI functionality. But, slowly migrating to local only. The migration process is currently a work in progress.
+A SwiftUI macOS application to run local LLM models.
 
-Currently, the project is set to point to local MLX models as default. A proper guide on setting up MLX and using MLX models with this application will come in the near future.
+Currently, the project is set to point to personal local MLX models as default. A proper guide on setting up MLX and using MLX models with this application will come in the near future, [here](#setting-up-local-models) is a quick way to bootstrap your machine to get started.
 
-Some of these initial designs were provided by [Dustin Simantob](https://www.linkedin.com/in/dustinsimantob). Although, the interface was mostly inspired by one of my favorite applications [Alfred](https://en.wikipedia.org/wiki/Alfred_(software)) (or Spotlight search) and the templatization was inspired by [Raycast](https://www.raycast.com).
+The interface was inspired by one of my favorite applications [Alfred](https://en.wikipedia.org/wiki/Alfred_(software)) (or Spotlight search) and the templatization was inspired by [Raycast](https://www.raycast.com).
 
-The future holds thoughts around prompt chaining and time-series forecasting.
+The future holds thoughts around prompt chaining and [time-series forecasting](https://github.com/riteshpakala/David).
 
 General Query View           |  Prompt Studio
 :-------------------------:|:-------------------------:
@@ -14,32 +14,16 @@ General Query View           |  Prompt Studio
 
 **Table of Contents**
 - [Requirements](#requirements)
-- [Swift Packages & Credits](#swift-packages-&-credits)
 - [Setting Up Local Models](#setting-up-local-models)
 - [Persisting Chat Messages](#persisting-chat-messages)
 - [Guide WIP](#guide)
 - [FAQ](#FAQ)
 - [More Previews](#more-previews)
-- [TODO](#TODO)
+- [Swift Packages & Credits](#swift-packages-&-credits)
 
 ## Requirements
 
-- `macOS 14.0+`  ***Build passing*** 🟢
-
-## Swift Packages & Credits
-
-- [Granite](https://github.com/riteshpakala/Granite)
-- [SandKit](https://github.com/riteshpakala/SandKit)
-- [VaultKit](https://github.com/pexavc/VaultKit)
-- [SwiftGPT](https://github.com/SwiftedMind/GPTSwift) by [@SwiftedMind](https://github.com/SwiftedMind)
-- [GPT3-Tokenizer](https://github.com/aespinilla/GPT3-Tokenizer) by [@aespinilla](https://github.com/aespinilla)
-- [swiftui-markdown](https://github.com/jaywcjlove/swiftui-markdown) by [@jaywcjlove](https://github.com/jaywcjlove)
-- [Ink](https://github.com/JohnSundell/Ink) by [@JohnSundell](https://github.com/JohnSundell)
-- [LaunchAtLogin](https://github.com/sindresorhus/LaunchAtLogin) by [@sindresorhus](https://github.com/sindresorhus)
-- [PureSwiftUI](https://github.com/CodeSlicing/pure-swift-ui) by [@Brett-Best](https://github.com/Brett-Best)
-
-Removed
-- [MarqueKit] is a private repo that handles encryption this has been removed and comments show where encryption can take place to safely store data like API Keys. 
+- `macOS 14.0+`
 
 ## Setting Up Local Models
 
@@ -49,7 +33,7 @@ This file [LLMEvaluator.swift](https://github.com/riteshpakala/Nea/blob/main/Ser
 
 ## Downloading Models from HuggingFace
 
-1. Setup a huggingface account at setup the [huggingface cli](https://huggingface.co/docs/huggingface_hub/main/en/guides/cli)
+1. Register a huggingface account and then setup the [huggingface cli](https://huggingface.co/docs/huggingface_hub/main/en/guides/cli)
 
 2. Using [homebrew](https://brew.sh) is the easiest option to set this up. Make sure homebrew is allowed to be used as a package manager within your team before downloading.
 
@@ -178,7 +162,19 @@ Using Commands           |  Switching Commands
 :-------------------------:|:-------------------------:
 ![Commands1](https://stoic-static-files.s3.us-west-1.amazonaws.com/neatia/demos/commands_1.gif) | ![Commands2](https://stoic-static-files.s3.us-west-1.amazonaws.com/neatia/demos/commands_2.gif)
 
+## Swift Packages & Credits
 
-## TODO
+- [Granite](https://github.com/riteshpakala/Granite)
+- [SandKit](https://github.com/riteshpakala/SandKit)
+- [VaultKit](https://github.com/pexavc/VaultKit)
+- [SwiftGPT](https://github.com/SwiftedMind/GPTSwift) by [@SwiftedMind](https://github.com/SwiftedMind)
+- [GPT3-Tokenizer](https://github.com/aespinilla/GPT3-Tokenizer) by [@aespinilla](https://github.com/aespinilla)
+- [swiftui-markdown](https://github.com/jaywcjlove/swiftui-markdown) by [@jaywcjlove](https://github.com/jaywcjlove)
+- [Ink](https://github.com/JohnSundell/Ink) by [@JohnSundell](https://github.com/JohnSundell)
+- [LaunchAtLogin](https://github.com/sindresorhus/LaunchAtLogin) by [@sindresorhus](https://github.com/sindresorhus)
+- [PureSwiftUI](https://github.com/CodeSlicing/pure-swift-ui) by [@Brett-Best](https://github.com/Brett-Best)
+- Some of these initial designs were provided by [Dustin Simantob](https://www.linkedin.com/in/dustinsimantob).
 
-- [ ] Clean up Online support, migrate to local models only.
+### Removed
+
+- [MarqueKit] is a private repo that handles encryption this has been removed and comments show where encryption can take place to safely store data like API Keys.
