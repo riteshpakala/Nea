@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Granite
 import GPT3_Tokenizer
-import MLX
+import SandKit
 
 struct StatView: View {
     @Environment(DeviceStat.self) private var deviceStat: DeviceStat
@@ -34,19 +34,13 @@ struct StatView: View {
                     Spacer()
                     
                     Label(
-                        "\(deviceStat.gpuUsage.activeMemory.formatted(.byteCount(style: .memory)))",
+                        "\(deviceStat.deviceMemoryUsage)",
                         systemImage: "info.circle.fill"
                     )
                     .labelStyle(.titleAndIcon)
                     .padding(.horizontal)
                     .help(
-                        Text(
-                            """
-                            Active Memory: \(deviceStat.gpuUsage.activeMemory.formatted(.byteCount(style: .memory)))/\(GPU.memoryLimit.formatted(.byteCount(style: .memory)))
-                            Cache Memory: \(deviceStat.gpuUsage.cacheMemory.formatted(.byteCount(style: .memory)))/\(GPU.cacheLimit.formatted(.byteCount(style: .memory)))
-                            Peak Memory: \(deviceStat.gpuUsage.peakMemory.formatted(.byteCount(style: .memory)))
-                            """
-                        )
+                        Text(deviceStat.memoryDetailedInfo)
                     )
                     
                     Text("Token count: ")

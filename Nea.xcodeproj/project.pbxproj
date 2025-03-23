@@ -200,8 +200,6 @@
 		71CD9A7A2D8F15D800C3DC09 /* GraniteUI in Frameworks */ = {isa = PBXBuildFile; productRef = 71CD9A792D8F15D800C3DC09 /* GraniteUI */; };
 		71CD9AE12D8F328700C3DC09 /* LLMModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AE02D8F328500C3DC09 /* LLMModels.swift */; };
 		71CD9AE22D8F328700C3DC09 /* LLMModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AE02D8F328500C3DC09 /* LLMModels.swift */; };
-		71CD9AEC2D8F347100C3DC09 /* DeviceStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */; };
-		71CD9AED2D8F347100C3DC09 /* DeviceStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */; };
 		71CD9AEF2D8F380A00C3DC09 /* SandClient.Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */; };
 		71CD9AF02D8F380A00C3DC09 /* SandClient.Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */; };
 		71CEBDDB2A07175700DE6CDE /* EnvironmentService+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CEBDD82A07175700DE6CDE /* EnvironmentService+Center.swift */; };
@@ -524,7 +522,6 @@
 		71CD9A762D8F15A000C3DC09 /* Granite */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Granite; path = ../Granite; sourceTree = SOURCE_ROOT; };
 		71CD9AAD2D8F30C200C3DC09 /* SandKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SandKit; path = ../SandKit; sourceTree = SOURCE_ROOT; };
 		71CD9AE02D8F328500C3DC09 /* LLMModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMModels.swift; sourceTree = "<group>"; };
-		71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStat.swift; sourceTree = "<group>"; };
 		71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandClient.Local.swift; sourceTree = "<group>"; };
 		71CEBDD82A07175700DE6CDE /* EnvironmentService+Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentService+Center.swift"; sourceTree = "<group>"; };
 		71CEBDD92A07175700DE6CDE /* EnvironmentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentService.swift; sourceTree = "<group>"; };
@@ -946,7 +943,6 @@
 		71A28E16295237AE00EAE8EE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */,
 				71A28E17295237AE00EAE8EE /* RoundedEdge.swift */,
 				71A28E18295237AE00EAE8EE /* Passthrough.swift */,
 				71A28E19295237AE00EAE8EE /* TapAndLongPressModifier.swift */,
@@ -1840,7 +1836,6 @@
 				71CEBE382A077E7800DE6CDE /* SandService.Ask.swift in Sources */,
 				714238292A1313F800E3A55A /* TuningView.swift in Sources */,
 				71F057A62A27205C00DBB956 /* Int+Convenience.swift in Sources */,
-				71CD9AEC2D8F347100C3DC09 /* DeviceStat.swift in Sources */,
 				7161D2FB29540AD00070FE59 /* View+Overlay.swift in Sources */,
 				71F057B82A27205C00DBB956 /* InnerShadowModel.swift in Sources */,
 				71F0578E2A27205C00DBB956 /* EdgeInsets+Convenience.swift in Sources */,
@@ -2034,7 +2029,6 @@
 				71CEBE362A077CEE00DE6CDE /* SandService.swift in Sources */,
 				71CEBE392A077E7800DE6CDE /* SandService.Ask.swift in Sources */,
 				71F057A72A27205C00DBB956 /* Int+Convenience.swift in Sources */,
-				71CD9AED2D8F347100C3DC09 /* DeviceStat.swift in Sources */,
 				7142382A2A1313F800E3A55A /* TuningView.swift in Sources */,
 				71F057B92A27205C00DBB956 /* InnerShadowModel.swift in Sources */,
 				71F0578F2A27205C00DBB956 /* EdgeInsets+Convenience.swift in Sources */,
