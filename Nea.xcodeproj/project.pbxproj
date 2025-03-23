@@ -202,8 +202,6 @@
 		71CD9AE22D8F328700C3DC09 /* LLMModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AE02D8F328500C3DC09 /* LLMModels.swift */; };
 		71CD9AE52D8F338A00C3DC09 /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = 71CD9AE42D8F338A00C3DC09 /* MLXLLM */; };
 		71CD9AE72D8F338A00C3DC09 /* MLXLMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 71CD9AE62D8F338A00C3DC09 /* MLXLMCommon */; };
-		71CD9AE92D8F33B800C3DC09 /* LLMEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AE82D8F33B500C3DC09 /* LLMEvaluator.swift */; };
-		71CD9AEA2D8F33B800C3DC09 /* LLMEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AE82D8F33B500C3DC09 /* LLMEvaluator.swift */; };
 		71CD9AEC2D8F347100C3DC09 /* DeviceStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */; };
 		71CD9AED2D8F347100C3DC09 /* DeviceStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */; };
 		71CD9AEF2D8F380A00C3DC09 /* SandClient.Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */; };
@@ -528,7 +526,6 @@
 		71CD9A762D8F15A000C3DC09 /* Granite */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Granite; path = ../Granite; sourceTree = SOURCE_ROOT; };
 		71CD9AAD2D8F30C200C3DC09 /* SandKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SandKit; path = ../SandKit; sourceTree = SOURCE_ROOT; };
 		71CD9AE02D8F328500C3DC09 /* LLMModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMModels.swift; sourceTree = "<group>"; };
-		71CD9AE82D8F33B500C3DC09 /* LLMEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMEvaluator.swift; sourceTree = "<group>"; };
 		71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStat.swift; sourceTree = "<group>"; };
 		71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandClient.Local.swift; sourceTree = "<group>"; };
 		71CEBDD82A07175700DE6CDE /* EnvironmentService+Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentService+Center.swift"; sourceTree = "<group>"; };
@@ -926,7 +923,6 @@
 		719BAE302A3A3F890095030A /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				71CD9AE82D8F33B500C3DC09 /* LLMEvaluator.swift */,
 				7192B1892A0B146600C579A4 /* SandClient.swift */,
 				71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */,
 				718148B92A0F818F0054E71A /* SandClient.Tokenizer.swift */,
@@ -1722,7 +1718,6 @@
 				71A28E2D295237AE00EAE8EE /* Run.swift in Sources */,
 				7110C88C2A02599A00824D58 /* TranslucentWindowBackground.swift in Sources */,
 				71CEBE0A2A0723ED00DE6CDE /* EnvironmentService._.swift in Sources */,
-				71CD9AEA2D8F33B800C3DC09 /* LLMEvaluator.swift in Sources */,
 				71EA5BDE2A105F0C00B0F82D /* PromptStudioCollectionView.swift in Sources */,
 				71F057A82A27205C00DBB956 /* FloatingPoint+Convenience.swift in Sources */,
 				71EDCFE12A094FF900857066 /* PaneKit.Window.swift in Sources */,
@@ -1917,7 +1912,6 @@
 				71CEBE452A07A75A00DE6CDE /* CommandMenu+View.swift in Sources */,
 				71A28E2E295237AE00EAE8EE /* Run.swift in Sources */,
 				71CEBE0B2A0723ED00DE6CDE /* EnvironmentService._.swift in Sources */,
-				71CD9AE92D8F33B800C3DC09 /* LLMEvaluator.swift in Sources */,
 				71EA5BDF2A105F0C00B0F82D /* PromptStudioCollectionView.swift in Sources */,
 				71F057A92A27205C00DBB956 /* FloatingPoint+Convenience.swift in Sources */,
 				71EDCFE22A094FF900857066 /* PaneKit.Window.swift in Sources */,

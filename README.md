@@ -29,9 +29,9 @@ General Query View           |  Prompt Studio
 
 The file [LLMModels.swift](https://github.com/riteshpakala/Nea/blob/main/Services/Sand/Models/LLMModels.swift), has some insight on how model configurations are prepared.
 
-This file [LLMEvaluator.swift](https://github.com/riteshpakala/Nea/blob/main/Services/Sand/Client/LLMEvaluator.swift), shows how the configuration is called and used to load the model and eventually generate responses.
+This file/class with its extensions [SandClient.swift](https://github.com/riteshpakala/Nea/blob/main/Services/Sand/Client/SandClient.swift), shows how the configuration is called and used to load the model and eventually generate responses.
 
-## Downloading Models from HuggingFace
+### Downloading Models from HuggingFace
 
 1. Register a huggingface account and then setup the [huggingface cli](https://huggingface.co/docs/huggingface_hub/main/en/guides/cli)
 
@@ -43,7 +43,7 @@ This file [LLMEvaluator.swift](https://github.com/riteshpakala/Nea/blob/main/Ser
 
 5. Install [git lfs](https://git-lfs.com), some of these models are quite large. When inside the folder you would like to clone repositories within, run `git lfs install` in terminal.
 
-6. Once done, download a model like [mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit](https://huggingface.co/mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit) via `git clone https://huggingface.co/mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit`. This is a great starter model to experiment with, about 1Gb~.
+6. Once done, download a model like [mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit](https://huggingface.co/mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit) via `git clone https://huggingface.co/mlx-community/DeepSeek-R1-Distill-Qwen-1.5B-4bit`. This is a great starter model to experiment with, about 1GB~.
 
 7. Update the [LLMModels.swift](https://github.com/riteshpakala/Nea/blob/main/Services/Sand/Models/LLMModels.swift) file to reflect your path and finally, ask a question.
 
@@ -109,7 +109,7 @@ func reset(messages: Bool = false) {
 
 ## Guide
 
-### [PaneKit](https://github.com/pexavc/Nea/tree/main/Services/Environment/Models/PaneKit)
+### [PaneKit](https://github.com/riteshpakala/Nea/tree/main/Services/Environment/Models/PaneKit)
 - Window resizing and size management occurs here.
 
 Declaritevly update a single window's size whenever an action requires 
@@ -130,7 +130,7 @@ state.pane?.display {
 }
 ```
 
-### [InteractionManager](https://github.com/pexavc/Nea/blob/main/Services/Environment/Models/InteractionManager.swift)
+### [InteractionManager](https://github.com/riteshpakala/Nea/blob/main/Services/Environment/Models/InteractionManager.swift)
 - Popups and Hotkey observation/registration
 
 Example of Using PopupableView to easily trigger popups in any window instance.
