@@ -200,8 +200,6 @@
 		71CD9A7A2D8F15D800C3DC09 /* GraniteUI in Frameworks */ = {isa = PBXBuildFile; productRef = 71CD9A792D8F15D800C3DC09 /* GraniteUI */; };
 		71CD9AE12D8F328700C3DC09 /* LLMModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AE02D8F328500C3DC09 /* LLMModels.swift */; };
 		71CD9AE22D8F328700C3DC09 /* LLMModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AE02D8F328500C3DC09 /* LLMModels.swift */; };
-		71CD9AE52D8F338A00C3DC09 /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = 71CD9AE42D8F338A00C3DC09 /* MLXLLM */; };
-		71CD9AE72D8F338A00C3DC09 /* MLXLMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 71CD9AE62D8F338A00C3DC09 /* MLXLMCommon */; };
 		71CD9AEC2D8F347100C3DC09 /* DeviceStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */; };
 		71CD9AED2D8F347100C3DC09 /* DeviceStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEB2D8F346F00C3DC09 /* DeviceStat.swift */; };
 		71CD9AEF2D8F380A00C3DC09 /* SandClient.Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD9AEE2D8F380700C3DC09 /* SandClient.Local.swift */; };
@@ -643,8 +641,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71CD9AE72D8F338A00C3DC09 /* MLXLMCommon in Frameworks */,
-				71CD9AE52D8F338A00C3DC09 /* MLXLLM in Frameworks */,
 				7105F8A92A30FF15003DA26F /* Ink in Frameworks */,
 				71CD9A7A2D8F15D800C3DC09 /* GraniteUI in Frameworks */,
 				7105F8BA2A310257003DA26F /* LaunchAtLogin in Frameworks */,
@@ -1515,8 +1511,6 @@
 				71E8BFF02A3138A60046A8E6 /* SandKit */,
 				71CD9A772D8F15D800C3DC09 /* Granite */,
 				71CD9A792D8F15D800C3DC09 /* GraniteUI */,
-				71CD9AE42D8F338A00C3DC09 /* MLXLLM */,
-				71CD9AE62D8F338A00C3DC09 /* MLXLMCommon */,
 			);
 			productName = "PEX (macOS)";
 			productReference = 711B3F7F2885D43B00F3080D /* Nea.app */;
@@ -1598,7 +1592,6 @@
 				7105F89E2A30FB6C003DA26F /* XCRemoteSwiftPackageReference "VaultKit" */,
 				7105F8B62A310233003DA26F /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 				7105F8BB2A310482003DA26F /* XCRemoteSwiftPackageReference "GPT3-Tokenizer" */,
-				71CD9AE32D8F338A00C3DC09 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */,
 			);
 			productRefGroup = 711B3F7A2885D43B00F3080D /* Products */;
 			projectDirPath = "";
@@ -2495,14 +2488,6 @@
 				minimumVersion = 0.1.2;
 			};
 		};
-		71CD9AE32D8F338A00C3DC09 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ml-explore/mlx-swift-examples.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.21.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2553,16 +2538,6 @@
 		71CD9A792D8F15D800C3DC09 /* GraniteUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GraniteUI;
-		};
-		71CD9AE42D8F338A00C3DC09 /* MLXLLM */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 71CD9AE32D8F338A00C3DC09 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
-			productName = MLXLLM;
-		};
-		71CD9AE62D8F338A00C3DC09 /* MLXLMCommon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 71CD9AE32D8F338A00C3DC09 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
-			productName = MLXLMCommon;
 		};
 		71E8BFF02A3138A60046A8E6 /* SandKit */ = {
 			isa = XCSwiftPackageProductDependency;

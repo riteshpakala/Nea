@@ -5,9 +5,6 @@
 //  Created by Ritesh Pakala Rao on 5/9/23.
 //
 
-import MLX
-import MLXLLM
-import MLXLMCommon
 import Foundation
 import SandKit
 import Combine
@@ -19,26 +16,7 @@ class SandClient {
     
     @SharedObject(SessionManager.id) var session: SessionManager
     
-    // Local
-    /// This controls which model loads. `phi3_5_4bit` is one of the smaller ones, so this will fit on
-    /// more devices.
-    var modelInfo = ""
-    let modelConfiguration = LLMModels.DeepSeek.Local.r1_32_distill_qwen_4bit
-
-    /// parameters controlling the output
-    let maxTokens = 1200
-
-    /// update the display every N tokens -- 4 looks like it updates continuously
-    /// and is low overhead.  observed ~15% reduction in tokens/s when updating
-    /// on every token
-    let displayEveryNTokens = 4
-
-    enum LoadState {
-        case idle
-        case loaded(ModelContainer)
-    }
-
-    var loadState = LoadState.idle
+    let kit = SandKit()
     
     let gpt3Tokenizer = GPT3Tokenizer()
     
