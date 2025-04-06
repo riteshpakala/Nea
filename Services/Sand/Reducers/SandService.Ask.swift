@@ -111,7 +111,7 @@ extension SandService {
             guard response?.isComplete == false else {
                 print("[SandService] AskIsComplete")
                 
-                if response?.isStream == false,
+                if // response?.isStream == false,
                    let data = response?.data {
                     
                     state.response = data

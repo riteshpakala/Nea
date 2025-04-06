@@ -2,6 +2,7 @@ import Granite
 import SwiftUI
 import LaunchAtLogin
 import SandKit
+// import MarqueKit
 
 extension ConfigService {
     struct Center: GraniteCenter {
@@ -73,21 +74,25 @@ extension ConfigService {
         @Store(persist: "nea.persistence.config.0003", autoSave: true, preload: true) public var state: State
     }
     
-    static func decode(_ bytes: [UInt32]) -> String? {
-        //[CAN REMOVE]
-//        let result = MarqueKit().searchBytes(bytes)
-//        guard let payload = result.payload.components(...).first else {
+   /* static func decode(_ bytes: [UInt32]) -> String? {
+        let result = MarqueKit().decodeBytes(bytes)
+        
+//        guard let payload = result.payload.components(separatedBy: MarqueKit.symbol).first else {
+//            print("{TEST} failed to seperate")
 //            return nil
 //        }
-//
-//        if let decodedData = Data(base64Encoded: payload),
-//           let decodedString = String(data: decodedData, encoding: .utf8) {
-//            return decodedString
-//        } else {
-//            return nil
-//        }
+        
+        var payload = result.payload.replacingOccurrences(of: "<m12>", with: "")
+        payload = payload.replacingOccurrences(of: "</m12>", with: "")
+        
+        if let decodedData = Data(base64Encoded: payload),
+           let decodedString = String(data: decodedData, encoding: .utf8) {
+            return decodedString
+        } else {
+            return nil
+        }
         return nil
-    }
+    } */
 }
 
 fileprivate extension Character {

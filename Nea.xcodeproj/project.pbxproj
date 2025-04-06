@@ -416,6 +416,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		717A8D0D2DA2FC08000FF357 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7110C88B2A02599A00824D58 /* TranslucentWindowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslucentWindowBackground.swift; sourceTree = "<group>"; };
 		7110C8BB2A026DEF00824D58 /* Nea--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Nea--macOS--Info.plist"; sourceTree = "<group>"; };
@@ -677,11 +690,11 @@
 		711B3F6C2885D43700F3080D = {
 			isa = PBXGroup;
 			children = (
-				71C2AB982D906CE6006678D4 /* README.md */,
 				71CD9A762D8F15A000C3DC09 /* Granite */,
 				71CD9AAD2D8F30C200C3DC09 /* SandKit */,
 				7110C8BB2A026DEF00824D58 /* Nea--macOS--Info.plist */,
 				719725FD28CC864400A64334 /* Nea--iOS--Info.plist */,
+				71C2AB982D906CE6006678D4 /* README.md */,
 				711B3F712885D43700F3080D /* Shared */,
 				711B3FB62885D48000F3080D /* Services */,
 				711B3FB52885D47C00F3080D /* Components */,
@@ -1493,6 +1506,7 @@
 				711B3F7C2885D43B00F3080D /* Frameworks */,
 				711B3F7D2885D43B00F3080D /* Resources */,
 				71508F642A0E3799008D0988 /* ShellScript */,
+				717A8D0D2DA2FC08000FF357 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

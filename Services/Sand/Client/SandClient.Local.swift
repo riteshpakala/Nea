@@ -35,7 +35,7 @@ extension SandClient {
                         output,
                         isComplete in
                         
-                        if (CFAbsoluteTimeGetCurrent() - replyDebouncerInit >= 0.24) || isComplete {
+                        if (CFAbsoluteTimeGetCurrent() - replyDebouncerInit >= 0.12) || isComplete {
                             replyDebouncerInit = CFAbsoluteTimeGetCurrent()
                             event
                                 .send(

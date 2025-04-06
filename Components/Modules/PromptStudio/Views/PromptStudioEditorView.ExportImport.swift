@@ -74,7 +74,7 @@ extension PromptStudioEditorView {
                         
                         if let data = try? Data(contentsOf: url) {
                             
-                            //Decryption occurs here in the Live version
+                            // Decryption occurs here in the Live version
                             
                             let decoder = JSONDecoder()
                             if let customPrompt = try? decoder.decode(CustomPrompt.self,
@@ -86,6 +86,40 @@ extension PromptStudioEditorView {
                             }
                         }
                     }
+                    
+                    // MarqueKit decryption flow.
+                    
+                    /* if let url = panel.url {
+                        //1. Retrieve as data
+                        if let data = try? Data(contentsOf: url) {
+                            //2. Convert into byte array
+                            guard let array = try? JSONSerialization.jsonObject(with: data, options: []) as? [UInt32] else {
+                                return
+                            }
+                            
+                            //3. Decrypt data
+                            if let decoded = ConfigService.decode(array) {
+                                if let data = decoded.data(using: .utf8) {
+                                    
+                                    do {
+                                        //4. Deserialize into json dictionary representation
+                                        let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any]
+                                        
+                                        //5. Convert to target object
+                                        if let decodedData = json,
+                                           let prompt = try? BasicDictionaryDecoder().decode(CustomPrompt.self, from: decodedData) {
+                                            
+                                            
+                                            update(prompt)
+                                            print("[PS] 4 \(service.commands.contains(prompt.command.value.lowercased()))")
+                                        }
+                                    } catch let error {
+                                        print("{TEST} \(error.localizedDescription)")
+                                    }
+                                }
+                            }
+                        }
+                    } */
                 }
                 
             } label : {
